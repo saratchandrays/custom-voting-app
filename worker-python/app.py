@@ -13,7 +13,7 @@ def get_redis():
       redis_conn.ping()
    else:
       print ("Connecting to Redis using x86 connection string")
-      redis_conn = Redis(host="new-redis", db=0, socket_timeout=5, password=os.getenv('redispasswd', "password"))
+      redis_conn = Redis(host="129.40.156.58", db=0, socket_timeout=5, password=os.getenv('redispasswd', "password"))
    print ("connected to redis!") 
    return redis_conn
 
