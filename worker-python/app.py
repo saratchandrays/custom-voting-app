@@ -9,7 +9,7 @@ import json
 def get_redis():
    if (os.getenv('OS_ENV') == "Z"):
       print ("Connecting to Redis using Z connection string")
-      redis_conn = Redis(host="new-redis", port=31781, db=0, socket_timeout=5)  # on Z 
+      redis_conn = Redis(host="129.40.156.58", port=31781, db=0, socket_timeout=5)  # on Z 
       redis_conn.ping()
    else:
       print ("Connecting to Redis using x86 connection string")
