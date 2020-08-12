@@ -17,7 +17,7 @@ def get_redis():
     if (os.getenv('OS_ENV') == "Z"):
         if not hasattr(g, 'redis'):
             print ("Connecting to Redis using Z connection string")
-            g.redis = Redis(host="new-redis", db=0, socket_timeout=5)  # on Z 
+            g.redis = Redis(host="129.40.156.58", port=31781, db=0, socket_timeout=5)  # on Z 
             print (g.redis.ping())
     else: 
        print ("Connecting to Redis using x86 connection string")
